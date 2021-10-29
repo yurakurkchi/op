@@ -19,7 +19,7 @@ int main() {
         res = res + pow(-1, i) *pow(x, 2*i+1) / (2*i+1);
     }
 
-    cout << fixed << setprecision(et) << res;
+    cout << fixed << setprecision(et)<< res;
 
     return 0;
 }
