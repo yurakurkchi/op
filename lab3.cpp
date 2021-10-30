@@ -7,6 +7,7 @@ using namespace std;
 int main() {
     float res = 0, x;
     int n, et;
+    int i = 0;
 
     cout << "enter n:" << endl;
     cin >> n;
@@ -15,8 +16,9 @@ int main() {
     cout << "enter x:" << endl;
     cin >> x;
      
-    for (int i = 0; i <= n; i++) {
+    while (i <= n) {
         res = res + pow(-1, i) *pow(x, 2*i+1) / (2*i+1);
+         i++;
     }
 
     cout << fixed << setprecision(et)<< res;
