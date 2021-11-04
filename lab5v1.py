@@ -1,7 +1,9 @@
 a = float(input("a = "))
 b = float(input("b = "))
+i = 0
+
 n=b-a
-i=0
+
 if (n >= 0):
     print("p: ")
     while i <= n:
