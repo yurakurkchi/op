@@ -16,9 +16,9 @@ n=b-a;
 if (n >= 0){
      cout << "p: " ;
     for (i=0; i<=n; i++)
-     {
-    cout << a+i << ", ";
-    }
+    { p = a + i;
+    cout << p << ", ";
+    } 
 }
 else{
 cout << "Error! a is bigger than b!";
