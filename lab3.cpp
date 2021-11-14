@@ -1,27 +1,32 @@
 #include <iostream>
-#include <math.h>
-#include <iomanip>
-
+#include <cmath>
 using namespace std;
 
+ long double res=1, x,sum=0;
+    int n=1, et;
+
 int main() {
-    float res = 0, x;
-    int n, et;
-    int i = 0;
-
-    cout << "enter n:" << endl;
-    cin >> n;
-    cout << "enter precision:" << endl;
+   
+    cout << "enter precision:" ;
     cin >> et;
-    cout << "enter x:" << endl;
+    cout << "enter x:" ;
     cin >> x;
-     
-    while (i <= n) {
-        res = res + pow(-1, i) *pow(x, 2*i+1) / (2*i+1);
-         i++;
-    }
 
-    cout << fixed << setprecision(et)<< res;
+     double e = 1/(pow(10 ,et));
+
+  if(abs(x)<1){
+
+while (abs(res) >= e){
+  res = pow(-1, n) * pow(x, 2*n+1) / (2*n+1);
+  n++;
+  sum += res;
+  
+}
+ cout << "\n" << sum ;
+ }
+else {
+cout << "|x|>1,це не задовільняє умову";
+}
 
     return 0;
 }

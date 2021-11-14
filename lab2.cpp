@@ -8,10 +8,13 @@ double y;
 
 int main(){
 
+
 cout << "введите х: ";
 cin >> x;
 cout << "введите y: ";
 cin >> y;
+
+
 
 if (y>x or y>-x) {
    if ((pow(x, 2) + pow(y, 2) <= 1 )){
