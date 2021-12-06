@@ -8,7 +8,6 @@ double y;
 
 int main(){
 
-
 cout << "введите х: ";
 cin >> x;
 cout << "введите y: ";
