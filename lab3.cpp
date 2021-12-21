@@ -2,31 +2,27 @@
 #include <cmath>
 using namespace std;
 
- long double res=1, x,sum=0;
-    int n=1, et;
-
 int main() {
-   
-    cout << "enter precision:" ;
-    cin >> et;
-    cout << "enter x:" ;
+    setlocale(LC_ALL, "rus");
+    double  x, ε, PreArctg, arctg, i = 0;
+    cout << "Введите значение аргумента арктангенса: ";
     cin >> x;
-
-     double e = 1/(pow(10 ,et));
-
-  if(abs(x)<1){
-
-while (abs(res) >= e){
-  res = pow(-1, n) * pow(x, 2*n+1) / (2*n+1);
-  n++;
-  sum += res;
-  
-}
- cout << "\n" << sum ;
- }
-else {
-cout << "|x|>1,це не задовільняє умову";
-}
-
+    if (abs(x) >= 1)
+    {
+        cout << "Введите значение аргумента арктангенса в диапазон (-1;1): ";
+        cin >> x;
+    }
+    cout << "Введите точность вычисления: ";
+    cin >> ε;
+    arctg = x;
+    do 
+    {
+        i = i + 1;
+        PreArctg = arctg;
+        arctg = arctg + ((pow(-1, i) * pow(x, 2 * i + 1)) / (2 * i + 1));
+    } 
+    while (abs(arctg - PreArctg) > ε);
+    cout << arctg << endl;
+    system("pause");
     return 0;
 }
