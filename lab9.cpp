@@ -39,7 +39,7 @@ return text;
 int main(){
 
 string text;
- cout << "Enter text: "; getline(cin,text);
+ cout << "Enter text: "; getline(cin, text);
 cout << "\nFormated text: " << sort_texting(text)<<"\n";
 }
 
