@@ -1,0 +1,1 @@
+Delete(A, n)
