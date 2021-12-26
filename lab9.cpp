@@ -15,7 +15,7 @@ string sort_texting(string text) {
 	int end;
     
     text += " ";
-    while(pos<text.length()) {
+    while(pos<text.length()) { 
         if (!isspace(text[pos])) {
         start = pos;
         end = text.find(" ", start);
