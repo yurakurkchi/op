@@ -15,7 +15,7 @@ string sort_texting(string text) {
 	int end;
     
     text += " ";
-    while(pos<text.length()) { 
+    while(pos < text.length()) { 
         if (!isspace(text[pos])) {
         start = pos;
         end = text.find(" ", start);
@@ -23,7 +23,7 @@ string sort_texting(string text) {
         num++; 
         }
         if (neword && num % 2 == 0) {
-        text.erase(start,end-start);
+        text.erase(start,end - start);
         }
         else if (neword) {
         pos = end;
